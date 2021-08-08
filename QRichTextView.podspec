@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "QRichTextView"
-  spec.version      = "0.0.4"
+  spec.version      = "0.0.1"
   spec.summary      = "Pod version for https://github.com/aryaxt/iOS-Rich-Text-Editor.git"
 
   # This description is used to generate tags and improve search results.
@@ -88,10 +88,10 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "QRichTextView/Classes/*.{h,m}", "QRichTextView/Classes/Categories/*.{h,m}", "QRichTextView/Classes/iphone Popover/*.{h,m}"
+  spec.source_files  = "QRichTextView/Classes/*.{h,m}", "QRichTextView/Classes/../*.{h,m}"
   # spec.exclude_files = "Classes/Exclude"
 
-  spec.public_header_files = "QRichTextView/**/*.h"
+  spec.public_header_files = "QRichTextView/Classes/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -103,7 +103,7 @@ Pod::Spec.new do |spec|
   #
 
   # spec.resource  = "icon.png"
-  spec.resources = "QRichTextView/../*.png", "QRichTextView/../../*.png"
+  spec.resources = "QRichTextView/Classes/Assets/*.png", "QRichTextView/Classes/Assets/../*.png", "QRichTextView/Classes/iphonePopover/../*.png"
 
   # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
