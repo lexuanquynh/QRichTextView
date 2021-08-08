@@ -63,6 +63,8 @@
 
 #pragma mark - Initialization -
 
+@dynamic delegate;
+
 - (id)initWithFrame:(CGRect)frame delegate:(id <RichTextEditorToolbarDelegate>)delegate dataSource:(id <RichTextEditorToolbarDataSource>)dataSource
 {
 	if (self = [super initWithFrame:frame])
@@ -454,19 +456,11 @@
 	[button.titleLabel setTextColor:[UIColor blackColor]];
 	[button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     
-    // Quynhlx Load image from framework
-    if (@available(iOS 13.0, *)) {
-        NSBundle *frameWorkBundle = [NSBundle bundleForClass:[self class]];
-        UIImage* tempImage = [UIImage imageNamed:image inBundle:frameWorkBundle withConfiguration:NULL];
-        [button setImage:tempImage forState:UIControlStateNormal];
-    } else {
-        // Fallback on earlier versions
-        UIImage *tempImage = [UIImage imageNamed: [NSString stringWithFormat:@"QRichTextView.framework/%@", image]];
-        NSLog(@"tempImage = %@", tempImage);
-        [button setImage:tempImage forState:UIControlStateNormal];
-    }
-	
-	
+    // Load image from framework
+    NSBundle *frameWorkBundle = [NSBundle bundleForClass:[self class]];
+    UIImage* tempImage = [UIImage imageNamed:image inBundle:frameWorkBundle compatibleWithTraitCollection:nil];
+    [button setImage:tempImage forState:UIControlStateNormal];
+        
 	return button;
 }
 
@@ -556,7 +550,7 @@
 {
 	if ([self.dataSource presentationStyleForRichTextEditorToolbar] == RichTextEditorToolbarPresentationStyleModal)
 	{
-		[[self.dataSource firsAvailableViewControllerForRichTextEditorToolbar] dismissViewControllerAnimated:YES completion:NO];
+		[[self.dataSource firsAvailableViewControllerForRichTextEditorToolbar] dismissViewControllerAnimated:YES completion:NULL];
 	}
 	else if ([self.dataSource presentationStyleForRichTextEditorToolbar] == RichTextEditorToolbarPresentationStylePopover)
 	{

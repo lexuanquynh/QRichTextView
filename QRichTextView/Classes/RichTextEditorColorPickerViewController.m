@@ -57,16 +57,10 @@
 	self.selectedColorView.layer.borderWidth = 1;
 	self.selectedColorView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
 	[self.view addSubview:self.selectedColorView];
-    if (@available(iOS 13.0, *)) {
-        NSBundle *frameWorkBundle = [NSBundle bundleForClass:[self class]];
-        UIImage* tempImage = [UIImage imageNamed:@"colors.jpg" inBundle:frameWorkBundle withConfiguration:NULL];       
-        self.colorsImageView = [[UIImageView alloc] initWithImage:tempImage];
-    } else {
-        // quynhlx need check
-        self.colorsImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"colors.jpg"]];
-    }
+    NSBundle *frameWorkBundle = [NSBundle bundleForClass:[self class]];
+    UIImage* tempImage = [UIImage imageNamed:@"colors.jpg" inBundle:frameWorkBundle compatibleWithTraitCollection:nil];
+    self.colorsImageView = [[UIImageView alloc] initWithImage: tempImage];    
     
-	
 	self.colorsImageView.frame = CGRectMake(2, 40, self.view.frame.size.width-4, self.view.frame.size.height - 40 - 2);
 	self.colorsImageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 	self.colorsImageView.layer.borderColor = [UIColor lightGrayColor].CGColor;
