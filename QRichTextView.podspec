@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "QRichTextView"
-  spec.version      = "0.0.2"
+  spec.version      = "0.0.3"
   spec.summary      = "Pod version for https://github.com/aryaxt/iOS-Rich-Text-Editor.git"
 
   # This description is used to generate tags and improve search results.
@@ -77,7 +77,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/lexuanquynh/QRichTextView.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/lexuanquynh/QRichTextView.git", :branch => "main", :tag => "#{spec.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
