@@ -5,9 +5,9 @@ Richtext view demo
 
 ## Use:
 
-pod 'QRichTextView'
-
-Drag datasource & delegate:
+1. pod 'QRichTextView'
+1. Drag a UITextView into you viewcontroller.
+1. Drag datasource & delegate:
 
 <img src="image/sample.png">
 
