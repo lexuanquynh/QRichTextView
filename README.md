@@ -4,10 +4,17 @@ Richtext view demo
 <img src="image/image.png" width="400">
 
 ## Use:
-
+### Method 1:
 1. pod 'QRichTextView'
 1. Drag a UITextView into you viewcontroller.
 1. Drag datasource & delegate:
+
+### Method 2:
+
+1. Change you scheme target to QRichTextView-Universal and build
+<img src="image/sample1.png">
+2.  Drag QRichTextView.framework into your project, change to do not embed:
+<img src="image/sample2.png">
 
 <img src="image/sample.png">
 
