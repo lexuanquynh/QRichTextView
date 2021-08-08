@@ -60,7 +60,6 @@
 		2211A51526BFE7E5002B8964 /* justifyfull.png in Resources */ = {isa = PBXBuildFile; fileRef = 2211A4D526BFE7E5002B8964 /* justifyfull.png */; };
 		2211A51626BFE7E5002B8964 /* code.png in Resources */ = {isa = PBXBuildFile; fileRef = 2211A4D626BFE7E5002B8964 /* code.png */; };
 		2211A51726BFE7E5002B8964 /* backcolor.png in Resources */ = {isa = PBXBuildFile; fileRef = 2211A4D726BFE7E5002B8964 /* backcolor.png */; };
-		2211A51826BFE7E5002B8964 /* colors.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2211A4D826BFE7E5002B8964 /* colors.jpg */; };
 		2211A51926BFE7E5002B8964 /* indent.png in Resources */ = {isa = PBXBuildFile; fileRef = 2211A4D926BFE7E5002B8964 /* indent.png */; };
 		2211A51A26BFE7E5002B8964 /* popoverArrowUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 2211A4DA26BFE7E5002B8964 /* popoverArrowUp.png */; };
 		2211A51B26BFE7E5002B8964 /* indent@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2211A4DB26BFE7E5002B8964 /* indent@2x.png */; };
@@ -116,6 +115,7 @@
 		2211A56426BFE815002B8964 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 2211A55A26BFE815002B8964 /* button.png */; };
 		2211A56526BFE815002B8964 /* buttonleft.png in Resources */ = {isa = PBXBuildFile; fileRef = 2211A55B26BFE815002B8964 /* buttonleft.png */; };
 		2211A56626BFE815002B8964 /* buttoncenter.png in Resources */ = {isa = PBXBuildFile; fileRef = 2211A55C26BFE815002B8964 /* buttoncenter.png */; };
+		22D6FB2A26C02582008C18D4 /* colors.png in Resources */ = {isa = PBXBuildFile; fileRef = 22D6FB2926C02582008C18D4 /* colors.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -170,7 +170,6 @@
 		2211A4D526BFE7E5002B8964 /* justifyfull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = justifyfull.png; sourceTree = "<group>"; };
 		2211A4D626BFE7E5002B8964 /* code.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = code.png; sourceTree = "<group>"; };
 		2211A4D726BFE7E5002B8964 /* backcolor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backcolor.png; sourceTree = "<group>"; };
-		2211A4D826BFE7E5002B8964 /* colors.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = colors.jpg; sourceTree = "<group>"; };
 		2211A4D926BFE7E5002B8964 /* indent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = indent.png; sourceTree = "<group>"; };
 		2211A4DA26BFE7E5002B8964 /* popoverArrowUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popoverArrowUp.png; sourceTree = "<group>"; };
 		2211A4DB26BFE7E5002B8964 /* indent@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "indent@2x.png"; sourceTree = "<group>"; };
@@ -226,6 +225,7 @@
 		2211A55A26BFE815002B8964 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
 		2211A55B26BFE815002B8964 /* buttonleft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonleft.png; sourceTree = "<group>"; };
 		2211A55C26BFE815002B8964 /* buttoncenter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttoncenter.png; sourceTree = "<group>"; };
+		22D6FB2926C02582008C18D4 /* colors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = colors.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -323,6 +323,7 @@
 		2211A4D026BFE7E5002B8964 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				22D6FB2926C02582008C18D4 /* colors.png */,
 				2211A55A26BFE815002B8964 /* button.png */,
 				2211A55C26BFE815002B8964 /* buttoncenter.png */,
 				2211A55826BFE815002B8964 /* buttoncenterSelected.png */,
@@ -340,7 +341,6 @@
 				2211A4D526BFE7E5002B8964 /* justifyfull.png */,
 				2211A4D626BFE7E5002B8964 /* code.png */,
 				2211A4D726BFE7E5002B8964 /* backcolor.png */,
-				2211A4D826BFE7E5002B8964 /* colors.jpg */,
 				2211A4D926BFE7E5002B8964 /* indent.png */,
 				2211A4DA26BFE7E5002B8964 /* popoverArrowUp.png */,
 				2211A4DB26BFE7E5002B8964 /* indent@2x.png */,
@@ -516,6 +516,7 @@
 				2211A52B26BFE7E5002B8964 /* file.png in Resources */,
 				2211A54926BFE7E5002B8964 /* unlink.png in Resources */,
 				2211A56326BFE815002B8964 /* buttonrightSelected.png in Resources */,
+				22D6FB2A26C02582008C18D4 /* colors.png in Resources */,
 				2211A51426BFE7E5002B8964 /* bold.png in Resources */,
 				2211A52C26BFE7E5002B8964 /* firstLineIndent.png in Resources */,
 				2211A52A26BFE7E5002B8964 /* firstLineIndent@2x.png in Resources */,
@@ -536,7 +537,6 @@
 				2211A53426BFE7E5002B8964 /* popoverArrowRightSimple.png in Resources */,
 				2211A51626BFE7E5002B8964 /* code.png in Resources */,
 				2211A53226BFE7E5002B8964 /* justifyright@2x.png in Resources */,
-				2211A51826BFE7E5002B8964 /* colors.jpg in Resources */,
 				2211A53E26BFE7E5002B8964 /* strikethrough@2x.png in Resources */,
 				2211A54426BFE7E5002B8964 /* undo.png in Resources */,
 				2211A53626BFE7E5002B8964 /* popoverArrowLeft@2x.png in Resources */,
