@@ -9,7 +9,7 @@ pod 'QRichTextView'
 
 Drag datasource & delegate:
 
-<img src="image/sample.png" width="400">
+<img src="image/sample.png">
 
 Read more:
 https://github.com/aryaxt/iOS-Rich-Text-Editor#readme
