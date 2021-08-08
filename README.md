@@ -8,15 +8,14 @@ Richtext view demo
 1. pod 'QRichTextView'
 1. Drag a UITextView into you viewcontroller.
 1. Drag datasource & delegate:
+<img src="image/sample.png">
+
 
 ### Method 2:
 
-1. Change you scheme target to QRichTextView-Universal and build
-<img src="image/sample1.png">
-2.  Drag QRichTextView.framework into your project, change to do not embed:
-<img src="image/sample2.png">
+1. Change you scheme target to QRichTextView-Universal and build: \n \n <img src="image/sample1.png">
 
-<img src="image/sample.png">
+1.  Drag QRichTextView.framework into your project, change to do not embed: \n \n <img src="image/sample2.png">
 
 Read more:
 https://github.com/aryaxt/iOS-Rich-Text-Editor#readme
