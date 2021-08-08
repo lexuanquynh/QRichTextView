@@ -7,6 +7,10 @@ Richtext view demo
 
 pod 'QRichTextView'
 
+Drag datasource & delegate:
+
+<img src="image/sample.png" width="400">
+
 Read more:
 https://github.com/aryaxt/iOS-Rich-Text-Editor#readme
 
