@@ -1,6 +1,0 @@
-framework module QRichTextView {
-  umbrella header "QRichTextView.h"
-
-  export *
-  module * { export * }
-}
