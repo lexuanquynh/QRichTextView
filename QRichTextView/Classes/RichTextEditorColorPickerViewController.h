@@ -44,12 +44,15 @@ typedef enum {
 @end
 
 @interface RichTextEditorColorPickerViewController : UIViewController
-
+- (instancetype)initWidthBackgroundColor:(UIImage*) backgroundColor;
 @property (nonatomic, weak) id <RichTextEditorColorPickerViewControllerDelegate> delegate;
 @property (nonatomic, weak) id <RichTextEditorColorPickerViewControllerDataSource> dataSource;
 @property (nonatomic, assign) RichTextEditorColorPickerAction action;
 @property (nonatomic, strong) UIImageView *colorsImageView;
 @property (nonatomic, strong) UIView *selectedColorView;
+
+// Save background color and text color
+@property (nonatomic, strong) UIImage* backgroundColor;
 
 - (IBAction)doneSelected:(id)sender;
 - (IBAction)closeSelected:(id)sender;

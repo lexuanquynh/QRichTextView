@@ -65,13 +65,14 @@
 
 @dynamic delegate;
 
-- (id)initWithFrame:(CGRect)frame delegate:(id <RichTextEditorToolbarDelegate>)delegate dataSource:(id <RichTextEditorToolbarDataSource>)dataSource
+- (id)initWithFrame:(CGRect)frame delegate:(id <RichTextEditorToolbarDelegate>)delegate dataSource:(id <RichTextEditorToolbarDataSource>)dataSource backgroundColorPicker:(UIImage*) backgroundColorPicker textColorPicker:(UIImage*) textColorPicker
 {
 	if (self = [super initWithFrame:frame])
 	{
 		self.delegate = delegate;
 		self.dataSource = dataSource;
-		
+        self.backgroundColorPicker = backgroundColorPicker;
+        self.textColorPicker = textColorPicker;
 		self.backgroundColor = [UIColor colorWithRed:245.0/255.0 green:245.0/255.0 blue:245.0/255.0 alpha:1];
 		self.layer.borderWidth = .7;
 		self.layer.borderColor = [UIColor lightGrayColor].CGColor;
@@ -197,7 +198,7 @@
 
 - (void)textBackgroundColorSelected:(UIButton *)sender
 {
-	RichTextEditorColorPickerViewController *colorPicker = [[RichTextEditorColorPickerViewController alloc] init];
+    RichTextEditorColorPickerViewController *colorPicker = [[RichTextEditorColorPickerViewController alloc] initWidthBackgroundColor:self.backgroundColorPicker];
 	colorPicker.action = RichTextEditorColorPickerActionTextBackgroundColor;
 	colorPicker.delegate = self;
 	colorPicker.dataSource = self;
@@ -206,7 +207,7 @@
 
 - (void)textForegroundColorSelected:(UIButton *)sender
 {
-	RichTextEditorColorPickerViewController *colorPicker = [[RichTextEditorColorPickerViewController alloc] init];
+    RichTextEditorColorPickerViewController *colorPicker = [[RichTextEditorColorPickerViewController alloc] initWidthBackgroundColor:self.textColorPicker];
 	colorPicker.action = RichTextEditorColorPickerActionTextForegroudColor;
 	colorPicker.delegate = self;
 	colorPicker.dataSource = self;

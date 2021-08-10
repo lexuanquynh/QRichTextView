@@ -31,6 +31,14 @@
 
 #pragma mark - VoewController Methods -
 
+- (instancetype)initWidthBackgroundColor:(UIImage*) backgroundColor {
+    self = [super init];
+    if (self) {
+        self.backgroundColor = backgroundColor;
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -58,9 +66,13 @@
 	self.selectedColorView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
 	[self.view addSubview:self.selectedColorView];
     NSBundle *frameWorkBundle = [NSBundle bundleForClass:[self class]];
-    UIImage* tempImage = [UIImage imageNamed:@"colors" inBundle:frameWorkBundle compatibleWithTraitCollection:nil];
-    self.colorsImageView = [[UIImageView alloc] initWithImage: tempImage];    
-    
+    // Custom image
+    UIImage* tempImage = self.backgroundColor;
+    if (tempImage == nil) {
+        // Default image
+        tempImage = [UIImage imageNamed:@"colors" inBundle:frameWorkBundle compatibleWithTraitCollection:nil];
+    }
+    self.colorsImageView = [[UIImageView alloc] initWithImage: tempImage];        
 	self.colorsImageView.frame = CGRectMake(2, 40, self.view.frame.size.width-4, self.view.frame.size.height - 40 - 2);
 	self.colorsImageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 	self.colorsImageView.layer.borderColor = [UIColor lightGrayColor].CGColor;

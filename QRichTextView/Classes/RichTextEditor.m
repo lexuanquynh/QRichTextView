@@ -44,6 +44,8 @@
 @implementation RichTextEditor
 
 #pragma mark - Initialization -
+//backgroundColorImage:self.backgroundColorImage textColorImage:self.textColorImage];
+
 
 - (id)init
 {
@@ -75,15 +77,26 @@
 	return self;
 }
 
+- (instancetype)initWidthBackgroundColorImage:(UIImage*) backgroundColorImagePicker textColorImagePicker:(UIImage*) textColorImagePicker {
+    if (self = [super init])
+    {
+        self.backgroundColorImagePicker = backgroundColorImagePicker;
+        self.textColorImagePicker = textColorImagePicker;
+        [self commonInitialization];
+    }
+    
+    return self;
+};
+
 - (void)commonInitialization
 {
     self.borderColor = [UIColor lightGrayColor];
     self.borderWidth = 1.0;
 
-	self.toolBar = [[RichTextEditorToolbar alloc] initWithFrame:CGRectMake(0, 0, [self currentScreenBoundsDependOnOrientation].size.width, RICHTEXTEDITOR_TOOLBAR_HEIGHT)
-													   delegate:self
-													 dataSource:self];
-	
+    self.toolBar = [[RichTextEditorToolbar alloc] initWithFrame:CGRectMake(0, 0, [self currentScreenBoundsDependOnOrientation].size.width, RICHTEXTEDITOR_TOOLBAR_HEIGHT)
+                                        delegate:self
+                                      dataSource:self
+                           backgroundColorPicker:self.backgroundColorImagePicker textColorPicker:self.textColorImagePicker];
 	self.typingAttributesInProgress = NO;
 	self.defaultIndentationSize = 15;
 	
@@ -92,6 +105,16 @@
     //If there is text already, then we do want to update the toolbar. Otherwise we don't.
     if ([self hasText])
         [self updateToolbarState];
+}
+
+- (void)setBackgroundColorImagePicker:(UIImage*)backgroundColorPicker {
+    _backgroundColorImagePicker = backgroundColorPicker;
+    self.toolBar.backgroundColorPicker = backgroundColorPicker;
+}
+
+- (void)setTextColorImagePicker:(UIImage*)textColorPicker {
+    _textColorImagePicker = textColorPicker;
+    self.toolBar.textColorPicker = textColorPicker;
 }
 
 #pragma mark - Override Methods -

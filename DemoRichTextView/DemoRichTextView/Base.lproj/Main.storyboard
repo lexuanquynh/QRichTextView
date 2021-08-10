@@ -41,6 +41,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="691-8r-yco" secondAttribute="trailing" constant="10" id="eSH-8r-Wf4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="richTextEditor" destination="691-8r-yco" id="d55-6G-e60"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

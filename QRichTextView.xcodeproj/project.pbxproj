@@ -33,9 +33,8 @@
 		2211A39A26BFC3F5002B8964 /* RichTextEditorFontPickerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2211A33A26BFC3F5002B8964 /* RichTextEditorFontPickerViewController.h */; };
 		2211A39B26BFC3F5002B8964 /* RichTextEditorFontSizePickerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2211A33B26BFC3F5002B8964 /* RichTextEditorFontSizePickerViewController.h */; };
 		2211A39C26BFC3F5002B8964 /* RichTextEditorToggleButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 2211A33C26BFC3F5002B8964 /* RichTextEditorToggleButton.h */; };
-		2211A39D26BFC3F5002B8964 /* RichTextEditor.h in Headers */ = {isa = PBXBuildFile; fileRef = 2211A33D26BFC3F5002B8964 /* RichTextEditor.h */; };
+		2211A39D26BFC3F5002B8964 /* RichTextEditor.h in Headers */ = {isa = PBXBuildFile; fileRef = 2211A33D26BFC3F5002B8964 /* RichTextEditor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2211A3D426BFC3F5002B8964 /* RichTextEditorColorPickerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2211A37726BFC3F5002B8964 /* RichTextEditorColorPickerViewController.h */; };
-		2211A44B26BFCA9B002B8964 /* RichTextEditor.m in Headers */ = {isa = PBXBuildFile; fileRef = 2211A33626BFC3F5002B8964 /* RichTextEditor.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		2211A48F26BFDF21002B8964 /* QRichTextViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2211A48E26BFDF21002B8964 /* QRichTextViewTests.swift */; };
 		2211A49126BFDF21002B8964 /* QRichTextView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2211A32526BFC3D6002B8964 /* QRichTextView.framework */; };
 		2211A4BE26BFE7DE002B8964 /* UIFont+RichTextEditor.h in Headers */ = {isa = PBXBuildFile; fileRef = 2211A4AF26BFE7DD002B8964 /* UIFont+RichTextEditor.h */; };
@@ -281,6 +280,19 @@
 			children = (
 				2211A4B226BFE7DD002B8964 /* NSAttributedString+RichTextEditor.h */,
 				2211A4BB26BFE7DE002B8964 /* NSAttributedString+RichTextEditor.m */,
+				2211A33D26BFC3F5002B8964 /* RichTextEditor.h */,
+				2211A33626BFC3F5002B8964 /* RichTextEditor.m */,
+				2211A37726BFC3F5002B8964 /* RichTextEditorColorPickerViewController.h */,
+				2211A33726BFC3F5002B8964 /* RichTextEditorColorPickerViewController.m */,
+				2211A33A26BFC3F5002B8964 /* RichTextEditorFontPickerViewController.h */,
+				2211A33226BFC3F5002B8964 /* RichTextEditorFontPickerViewController.m */,
+				2211A33B26BFC3F5002B8964 /* RichTextEditorFontSizePickerViewController.h */,
+				2211A33426BFC3F5002B8964 /* RichTextEditorFontSizePickerViewController.m */,
+				2211A33826BFC3F5002B8964 /* RichTextEditorPopover.h */,
+				2211A33C26BFC3F5002B8964 /* RichTextEditorToggleButton.h */,
+				2211A33526BFC3F5002B8964 /* RichTextEditorToggleButton.m */,
+				2211A33926BFC3F5002B8964 /* RichTextEditorToolbar.h */,
+				2211A33326BFC3F5002B8964 /* RichTextEditorToolbar.m */,
 				2211A4B326BFE7DE002B8964 /* UIBarButtonItem+WEPopover.h */,
 				2211A4BD26BFE7DE002B8964 /* UIBarButtonItem+WEPopover.m */,
 				2211A4AF26BFE7DD002B8964 /* UIFont+RichTextEditor.h */,
@@ -294,19 +306,6 @@
 				2211A4B926BFE7DE002B8964 /* WEPopoverParentView.h */,
 				2211A4B526BFE7DE002B8964 /* WETouchableView.h */,
 				2211A4B426BFE7DE002B8964 /* WETouchableView.m */,
-				2211A33226BFC3F5002B8964 /* RichTextEditorFontPickerViewController.m */,
-				2211A33326BFC3F5002B8964 /* RichTextEditorToolbar.m */,
-				2211A33426BFC3F5002B8964 /* RichTextEditorFontSizePickerViewController.m */,
-				2211A33526BFC3F5002B8964 /* RichTextEditorToggleButton.m */,
-				2211A33626BFC3F5002B8964 /* RichTextEditor.m */,
-				2211A33726BFC3F5002B8964 /* RichTextEditorColorPickerViewController.m */,
-				2211A33826BFC3F5002B8964 /* RichTextEditorPopover.h */,
-				2211A33926BFC3F5002B8964 /* RichTextEditorToolbar.h */,
-				2211A33A26BFC3F5002B8964 /* RichTextEditorFontPickerViewController.h */,
-				2211A33B26BFC3F5002B8964 /* RichTextEditorFontSizePickerViewController.h */,
-				2211A33C26BFC3F5002B8964 /* RichTextEditorToggleButton.h */,
-				2211A33D26BFC3F5002B8964 /* RichTextEditor.h */,
-				2211A37726BFC3F5002B8964 /* RichTextEditorColorPickerViewController.h */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -398,8 +397,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2211A39926BFC3F5002B8964 /* RichTextEditorToolbar.h in Headers */,
+				2211A39D26BFC3F5002B8964 /* RichTextEditor.h in Headers */,
 				2211A4C426BFE7DE002B8964 /* WETouchableView.h in Headers */,
-				2211A44B26BFCA9B002B8964 /* RichTextEditor.m in Headers */,
 				2211A4C926BFE7DE002B8964 /* UIView+RichTextEditor.h in Headers */,
 				2211A4CB26BFE7DE002B8964 /* WEPopoverContainerView.h in Headers */,
 				2211A3D426BFC3F5002B8964 /* RichTextEditorColorPickerViewController.h in Headers */,
@@ -409,7 +408,6 @@
 				2211A39826BFC3F5002B8964 /* RichTextEditorPopover.h in Headers */,
 				2211A4C626BFE7DE002B8964 /* WEPopoverController.h in Headers */,
 				2211A4BE26BFE7DE002B8964 /* UIFont+RichTextEditor.h in Headers */,
-				2211A39D26BFC3F5002B8964 /* RichTextEditor.h in Headers */,
 				2211A39C26BFC3F5002B8964 /* RichTextEditorToggleButton.h in Headers */,
 				2211A32A26BFC3D6002B8964 /* QRichTextView.h in Headers */,
 				2211A39B26BFC3F5002B8964 /* RichTextEditorFontSizePickerViewController.h in Headers */,

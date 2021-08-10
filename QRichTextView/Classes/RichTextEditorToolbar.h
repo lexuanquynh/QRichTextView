@@ -86,7 +86,10 @@ typedef enum{
 @property (nonatomic, weak) id <RichTextEditorToolbarDelegate> delegate;
 @property (nonatomic, weak) id <RichTextEditorToolbarDataSource> dataSource;
 
-- (id)initWithFrame:(CGRect)frame delegate:(id <RichTextEditorToolbarDelegate>)delegate dataSource:(id <RichTextEditorToolbarDataSource>)dataSource;
+@property (nonatomic, strong) UIImage* backgroundColorPicker;
+@property (nonatomic, strong) UIImage* textColorPicker;
+
+- (id)initWithFrame:(CGRect)frame delegate:(id <RichTextEditorToolbarDelegate>)delegate dataSource:(id <RichTextEditorToolbarDataSource>)dataSource backgroundColorPicker:(UIImage*) backgroundColorPicker textColorPicker:(UIImage*) textColorPicker;
 - (void)updateStateWithAttributes:(NSDictionary *)attributes;
 - (void)redraw;
 
