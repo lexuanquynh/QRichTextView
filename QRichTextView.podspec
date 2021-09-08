@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "QRichTextView"
-  spec.version      = "0.0.8"
+  spec.version      = "0.0.9"
   spec.summary      = "Pod version for https://github.com/aryaxt/iOS-Rich-Text-Editor.git"
 
   # This description is used to generate tags and improve search results.
