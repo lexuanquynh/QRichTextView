@@ -45,14 +45,14 @@
 	
 	self.view.backgroundColor = [UIColor whiteColor];
 	
-	UIButton *btnClose = [[UIButton alloc] initWithFrame:CGRectMake(5, 5, 60, 30)];
+	UIButton *btnClose = [[UIButton alloc] initWithFrame:CGRectMake(5, 5, 80, 30)];
 	[btnClose addTarget:self action:@selector(closeSelected:) forControlEvents:UIControlEventTouchUpInside];
 	[btnClose.titleLabel setFont:[UIFont boldSystemFontOfSize:12]];
 	[btnClose setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
 	[btnClose setTitle:@"キャンセル" forState:UIControlStateNormal];
 	[self.view addSubview:btnClose];
 	
-	UIButton *btnDone = [[UIButton alloc] initWithFrame:CGRectMake(65, 5, 60, 30)];
+	UIButton *btnDone = [[UIButton alloc] initWithFrame:CGRectMake(65, 5, 80, 30)];
 	[btnDone addTarget:self action:@selector(doneSelected:) forControlEvents:UIControlEventTouchUpInside];
 	[btnDone.titleLabel setFont:[UIFont boldSystemFontOfSize:12]];
 	[btnDone setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
