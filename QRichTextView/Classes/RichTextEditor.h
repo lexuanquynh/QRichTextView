@@ -51,7 +51,7 @@
 @property (nonatomic, strong) UIImage* textColorImagePicker;
 - (void)setBackgroundColorImage:(UIImage*)backgroundColorImage;
 - (void)setTextColorImage:(UIImage*)textColorImage;
-
+- (void)applyAttrubutesToSelectedRange:(id)attribute forKey:(NSString *)key;
 - (instancetype)initWidthBackgroundColorImage:(UIImage*) backgroundColorImagePicker textColorImagePicker:(UIImage*) textColorImage;
 - (void)setBorderColor:(UIColor*)borderColor;
 - (void)setBorderWidth:(CGFloat)borderWidth;
