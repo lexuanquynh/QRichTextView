@@ -17,9 +17,17 @@ Richtext view demo
 
 1. Drag QRichTextView.framework into your project, change to do not embed:  <img src="image/sample2.png">
 
+### Use:
+Custom for image picker color:
+``` Swift
+        richTextEditor.backgroundColorImagePicker = UIImage(named: "Background.png")
+        richTextEditor.textColorImagePicker = UIImage(named: "Textcolor.png")
+```
+
 Read more:
 https://github.com/aryaxt/iOS-Rich-Text-Editor#readme
 
+### 
 ## License: 
 MIT license.
 
