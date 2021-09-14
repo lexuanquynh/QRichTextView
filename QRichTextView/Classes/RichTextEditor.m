@@ -109,7 +109,7 @@
     if (self.toolBar == NULL) {
         return;
     }
-    self.toolBar.fontSizeSelected = fontSizeSelected;//quynhlx
+    self.toolBar.fontSizeSelected = fontSizeSelected;
 }
 
 - (void)setBackgroundColorImagePicker:(UIImage*)backgroundColorPicker {
@@ -235,7 +235,7 @@
 - (void)richTextEditorToolbarDidSelectFontSize:(NSNumber *)fontSize
 {
     NSNumber *pointFontSize =  [[NSNumber alloc] initWithFloat:fontSize.floatValue * 1.3281472327365];
-	[self applyFontAttributesToSelectedRangeWithBoldTrait:nil italicTrait:nil fontName:nil fontSize:pointFontSize];// quynhlx
+	[self applyFontAttributesToSelectedRangeWithBoldTrait:nil italicTrait:nil fontName:nil fontSize:pointFontSize];
 }
 
 - (void)richTextEditorToolbarDidSelectFontWithName:(NSString *)fontName

@@ -97,7 +97,6 @@
 	NSParagraphStyle *paragraphTyle = [attributes objectForKey:NSParagraphStyleAttributeName];
 	
     [self.btnFontSize setTitle:[NSString stringWithFormat:@"%.f", font.pointSize / 1.3281472327365] forState:UIControlStateNormal];
-    NSLog(@"number = %f", font.pointSize / 1.3281472327365);//quynhlx
 	[self.btnFont setTitle:font.familyName forState:UIControlStateNormal];
 	
 	self.btnBold.on = [font isBold];
@@ -590,8 +589,7 @@
 #pragma mark - RichTextEditorFontSizePickerViewControllerDelegate & RichTextEditorFontSizePickerViewControllerDataSource Methods -
 
 - (void)richTextEditorFontSizePickerViewControllerDidSelectFontSize:(NSNumber *)fontSize
-{
-    //quynhlx
+{ 
     self.fontSizeSelected = fontSize;
 	[self.delegate richTextEditorToolbarDidSelectFontSize:fontSize];
 	[self dismissViewController];
