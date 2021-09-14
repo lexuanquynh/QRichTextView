@@ -106,7 +106,7 @@
 	if (!cell)
 		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     if (fontSize.floatValue == self.fontSizeSelected.floatValue) {
-        cell.textLabel.text = [NSString stringWithFormat:@"＊%@", fontSize.stringValue];
+        cell.textLabel.text = [NSString stringWithFormat:@"%@※", fontSize.stringValue];
     } else {
         cell.textLabel.text = fontSize.stringValue;
     }

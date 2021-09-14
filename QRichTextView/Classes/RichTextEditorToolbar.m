@@ -97,6 +97,7 @@
 	NSParagraphStyle *paragraphTyle = [attributes objectForKey:NSParagraphStyleAttributeName];
 	
     [self.btnFontSize setTitle:[NSString stringWithFormat:@"%.f", font.pointSize / 1.3281472327365] forState:UIControlStateNormal];
+    self.fontSizeSelected = [[NSNumber alloc] initWithFloat:font.pointSize / 1.3281472327365];
 	[self.btnFont setTitle:font.familyName forState:UIControlStateNormal];
 	
 	self.btnBold.on = [font isBold];
