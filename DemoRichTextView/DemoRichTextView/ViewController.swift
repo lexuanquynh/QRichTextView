@@ -15,6 +15,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         richTextEditor.backgroundColorImagePicker = UIImage(named: "Background.png")
         richTextEditor.textColorImagePicker = UIImage(named: "Textcolor.png")
+        richTextEditor.setFonsizeSelected(12)
     }
 
 

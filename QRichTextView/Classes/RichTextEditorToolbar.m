@@ -76,7 +76,7 @@
 		self.backgroundColor = [UIColor colorWithRed:245.0/255.0 green:245.0/255.0 blue:245.0/255.0 alpha:1];
 		self.layer.borderWidth = .7;
 		self.layer.borderColor = [UIColor lightGrayColor].CGColor;
-		
+        self.fontSizeSelected = [[NSNumber alloc] initWithFloat:12];
 		[self initializeButtons];
         [self populateToolbar];
 	}
@@ -96,7 +96,8 @@
 	UIFont *font = [attributes objectForKey:NSFontAttributeName];
 	NSParagraphStyle *paragraphTyle = [attributes objectForKey:NSParagraphStyleAttributeName];
 	
-	[self.btnFontSize setTitle:[NSString stringWithFormat:@"%.f", font.pointSize] forState:UIControlStateNormal];
+    [self.btnFontSize setTitle:[NSString stringWithFormat:@"%.f", font.pointSize / 1.3281472327365] forState:UIControlStateNormal];
+    NSLog(@"number = %f", font.pointSize / 1.3281472327365);//quynhlx
 	[self.btnFont setTitle:font.familyName forState:UIControlStateNormal];
 	
 	self.btnBold.on = [font isBold];
@@ -184,6 +185,7 @@
 	RichTextEditorFontSizePickerViewController *fontSizePicker = [[RichTextEditorFontSizePickerViewController alloc] init];
 	fontSizePicker.delegate = self;
 	fontSizePicker.dataSource = self;
+    fontSizePicker.fontSizeSelected = self.fontSizeSelected;
 	[self presentViewController:fontSizePicker fromView:sender];
 }
 
@@ -589,6 +591,8 @@
 
 - (void)richTextEditorFontSizePickerViewControllerDidSelectFontSize:(NSNumber *)fontSize
 {
+    //quynhlx
+    self.fontSizeSelected = fontSize;
 	[self.delegate richTextEditorToolbarDidSelectFontSize:fontSize];
 	[self dismissViewController];
 }
@@ -607,6 +611,10 @@
 {
 	return [self.dataSource fontSizeSelectionForRichTextEditorToolbar];
 }
+
+//- (NSNumber *)richTextEditorFontSizePickerFontSizeSelected {
+//    return [self.dataSource fontSizeSelectedForRichTextEditorToolbar];
+//}
 
 #pragma mark - RichTextEditorFontPickerViewControllerDelegate & RichTextEditorFontPickerViewControllerDataSource Methods -
 

@@ -44,8 +44,6 @@
 @implementation RichTextEditor
 
 #pragma mark - Initialization -
-//backgroundColorImage:self.backgroundColorImage textColorImage:self.textColorImage];
-
 
 - (id)init
 {
@@ -105,6 +103,13 @@
     //If there is text already, then we do want to update the toolbar. Otherwise we don't.
     if ([self hasText])
         [self updateToolbarState];
+}
+
+-(void)setFonsizeSelected:(NSNumber *)fontSizeSelected {
+    if (self.toolBar == NULL) {
+        return;
+    }
+    self.toolBar.fontSizeSelected = fontSizeSelected;//quynhlx
 }
 
 - (void)setBackgroundColorImagePicker:(UIImage*)backgroundColorPicker {
@@ -229,7 +234,8 @@
 
 - (void)richTextEditorToolbarDidSelectFontSize:(NSNumber *)fontSize
 {
-	[self applyFontAttributesToSelectedRangeWithBoldTrait:nil italicTrait:nil fontName:nil fontSize:fontSize];
+    NSNumber *pointFontSize =  [[NSNumber alloc] initWithFloat:fontSize.floatValue * 1.3281472327365];
+	[self applyFontAttributesToSelectedRangeWithBoldTrait:nil italicTrait:nil fontName:nil fontSize:pointFontSize];// quynhlx
 }
 
 - (void)richTextEditorToolbarDidSelectFontWithName:(NSString *)fontName
@@ -584,6 +590,15 @@
 	
 	return nil;
 }
+
+//- (NSNumber *)fontSizeSelectedForRichTextEditorToolbar {
+//    if (self.dataSource && [self.dataSource respondsToSelector:@selector(fontSizeSelectedForRichTextEditor:)])
+//    {
+//        return [self.dataSource fontSizeSelectedForRichTextEditor:self];
+//    }
+//    
+//    return nil;
+//}
 
 - (RichTextEditorToolbarPresentationStyle)presentationStyleForRichTextEditorToolbar
 {

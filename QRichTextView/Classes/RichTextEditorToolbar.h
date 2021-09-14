@@ -73,6 +73,7 @@ typedef enum{
 
 @protocol RichTextEditorToolbarDataSource <NSObject>
 - (NSArray *)fontSizeSelectionForRichTextEditorToolbar;
+//- (NSNumber *)fontSizeSelectedForRichTextEditorToolbar;
 - (NSArray *)fontFamilySelectionForRichTextEditorToolbar;
 - (RichTextEditorToolbarPresentationStyle)presentationStyleForRichTextEditorToolbar;
 - (UIModalPresentationStyle)modalPresentationStyleForRichTextEditorToolbar;
@@ -88,6 +89,7 @@ typedef enum{
 
 @property (nonatomic, strong) UIImage* backgroundColorPicker;
 @property (nonatomic, strong) UIImage* textColorPicker;
+@property (nonatomic, strong) NSNumber *fontSizeSelected;
 
 - (id)initWithFrame:(CGRect)frame delegate:(id <RichTextEditorToolbarDelegate>)delegate dataSource:(id <RichTextEditorToolbarDataSource>)dataSource backgroundColorPicker:(UIImage*) backgroundColorPicker textColorPicker:(UIImage*) textColorPicker;
 - (void)updateStateWithAttributes:(NSDictionary *)attributes;

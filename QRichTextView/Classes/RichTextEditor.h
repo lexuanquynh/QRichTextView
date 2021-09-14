@@ -32,6 +32,7 @@
 @protocol RichTextEditorDataSource <NSObject>
 @optional
 - (NSArray *)fontSizeSelectionForRichTextEditor:(RichTextEditor *)richTextEditor;
+- (NSNumber *)fontSizeSelectedForRichTextEditor:(RichTextEditor *)richTextEditor;
 - (NSArray *)fontFamilySelectionForRichTextEditor:(RichTextEditor *)richTextEditor;
 - (RichTextEditorToolbarPresentationStyle)presentationStyleForRichTextEditor:(RichTextEditor *)richTextEditor;
 - (UIModalPresentationStyle)modalPresentationStyleForRichTextEditor:(RichTextEditor *)richTextEditor;
@@ -49,12 +50,10 @@
 // Custom for picker image color
 @property (nonatomic, strong) UIImage* backgroundColorImagePicker;
 @property (nonatomic, strong) UIImage* textColorImagePicker;
-- (void)setBackgroundColorImage:(UIImage*)backgroundColorImage;
-- (void)setTextColorImage:(UIImage*)textColorImage;
 - (void)applyAttrubutesToSelectedRange:(id)attribute forKey:(NSString *)key;
 - (instancetype)initWidthBackgroundColorImage:(UIImage*) backgroundColorImagePicker textColorImagePicker:(UIImage*) textColorImage;
 - (void)setBorderColor:(UIColor*)borderColor;
 - (void)setBorderWidth:(CGFloat)borderWidth;
 - (NSString *)htmlString;
-
+-(void)setFonsizeSelected:(NSNumber *)fontSizeSelected;
 @end

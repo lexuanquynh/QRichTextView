@@ -34,7 +34,6 @@
     [super viewDidLoad];
 	
 	NSArray *customizedFontSizes = [self.dataSource richTextEditorFontSizePickerViewControllerCustomFontSizesForSelection];
-	
 	if (customizedFontSizes)
 		self.fontSizes = customizedFontSizes;
 	else
@@ -106,8 +105,12 @@
 	
 	if (!cell)
 		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    if (fontSize.floatValue == self.fontSizeSelected.floatValue) {
+        cell.textLabel.text = [NSString stringWithFormat:@"＊%@", fontSize.stringValue];
+    } else {
+        cell.textLabel.text = fontSize.stringValue;
+    }
 	
-	cell.textLabel.text = fontSize.stringValue;
 	cell.textLabel.font = [UIFont boldSystemFontOfSize:fontSize.intValue];
 	return cell;
 }
