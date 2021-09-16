@@ -180,11 +180,11 @@
 
 - (void)setupMenuItems
 {
-	UIMenuItem *selectParagraph = [[UIMenuItem alloc] initWithTitle:@"Select Paragraph" action:@selector(selectParagraph:)];
-	UIMenuItem *boldItem = [[UIMenuItem alloc] initWithTitle:@"Bold" action:@selector(richTextEditorToolbarDidSelectBold)];
-	UIMenuItem *italicItem = [[UIMenuItem alloc] initWithTitle:@"Italic" action:@selector(richTextEditorToolbarDidSelectItalic)];
-	UIMenuItem *underlineItem = [[UIMenuItem alloc] initWithTitle:@"Underline" action:@selector(richTextEditorToolbarDidSelectUnderline)];
-	UIMenuItem *strikeThroughItem = [[UIMenuItem alloc] initWithTitle:@"Strike" action:@selector(richTextEditorToolbarDidSelectStrikeThrough)];
+	UIMenuItem *selectParagraph = [[UIMenuItem alloc] initWithTitle:@"段落を選択" action:@selector(selectParagraph:)];
+	UIMenuItem *boldItem = [[UIMenuItem alloc] initWithTitle:@"太字" action:@selector(richTextEditorToolbarDidSelectBold)];
+	UIMenuItem *italicItem = [[UIMenuItem alloc] initWithTitle:@"斜体" action:@selector(richTextEditorToolbarDidSelectItalic)];
+	UIMenuItem *underlineItem = [[UIMenuItem alloc] initWithTitle:@"下線" action:@selector(richTextEditorToolbarDidSelectUnderline)];
+	UIMenuItem *strikeThroughItem = [[UIMenuItem alloc] initWithTitle:@"取り消し線" action:@selector(richTextEditorToolbarDidSelectStrikeThrough)];
 	
 	[[UIMenuController sharedMenuController] setMenuItems:@[selectParagraph, boldItem, italicItem, underlineItem, strikeThroughItem]];
 }

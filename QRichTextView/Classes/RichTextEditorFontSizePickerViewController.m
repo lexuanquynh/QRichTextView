@@ -111,7 +111,7 @@
         cell.textLabel.text = fontSize.stringValue;
     }
 	
-	cell.textLabel.font = [UIFont boldSystemFontOfSize:fontSize.intValue];
+	cell.textLabel.font = [UIFont boldSystemFontOfSize:fontSize.intValue * 1.3281472327365];
 	return cell;
 }
 
