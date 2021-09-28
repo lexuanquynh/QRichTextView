@@ -74,10 +74,10 @@
 	
 #if __IPHONE_OS_VERSION_MIN_REQUIRED >= 70000
     
-    self.preferredContentSize = CGSizeMake(100, 400);
+    self.preferredContentSize = CGSizeMake(130, 400);
 #else
     
-	self.contentSizeForViewInPopover = CGSizeMake(100, 400);
+	self.contentSizeForViewInPopover = CGSizeMake(130, 400);
 #endif
 
 }
@@ -106,7 +106,7 @@
 	if (!cell)
 		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     if (fontSize.floatValue == self.fontSizeSelected.floatValue) {
-        cell.textLabel.text = [NSString stringWithFormat:@"%@※", fontSize.stringValue];
+        cell.textLabel.text = [NSString stringWithFormat:@"%@ ※", fontSize.stringValue];
     } else {
         cell.textLabel.text = fontSize.stringValue;
     }
